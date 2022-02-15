@@ -13,10 +13,12 @@
         <div id="date"></div>
     </div>
     <script>
+        const culture = 'ru-RU';
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
         window.setInterval(function() {
             const now = new Date();
-            document.getElementById("time").innerHTML = now.toLocaleTimeString("ru-RU");
-            document.getElementById("date").innerHTML = now.toLocaleDateString("ru-RU");
+            document.getElementById("time").innerHTML = now.toLocaleTimeString(culture);
+            document.getElementById("date").innerHTML = now.toLocaleDateString(culture, options);
         }, 1000)
     </script>
 </body>

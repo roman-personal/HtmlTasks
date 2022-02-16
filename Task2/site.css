@@ -1,0 +1,64 @@
+body {
+    font-size: 1em;
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "time time time"
+        "start stop reset";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+    padding-top: 32px;
+}
+
+#time {
+    grid-area: time;
+    font-size: 10em;
+    font-weight: 100;
+    text-align: center;
+}
+
+button {
+    color: white;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1em;
+    background-color: #10b987;
+}
+
+
+button:hover {
+    background-color: #00a977;
+}
+
+button[disabled] {
+    background-color: #aaa;
+}
+
+button[disabled]:hover {
+    background-color: #999;
+}
+
+#start {
+    grid-area: start;
+}
+
+#stop {
+    grid-area: stop;
+}
+
+#reset {
+    grid-area: reset;
+}

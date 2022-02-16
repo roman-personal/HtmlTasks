@@ -61,8 +61,8 @@
                 enableControls();
                 intervalId = window.setInterval(function () {
                     current = Date.now() - base;
-                    display();
                     enableControls();
+                    display();
                 }, 1000);
             }
         }
@@ -79,8 +79,8 @@
             acc = 0;
             current = 0;
             base = Date.now();
-            display();
             enableControls();
+            display();
         }
     </script>
 </body>

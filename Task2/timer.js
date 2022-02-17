@@ -43,6 +43,7 @@ function start() {
     if (!started) {
         acc += current;
         base = Date.now();
+        current = 0;
         started = true;
         enableControls();
         intervalId = window.setInterval(function () {

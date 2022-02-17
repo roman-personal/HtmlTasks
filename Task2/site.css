@@ -21,9 +21,9 @@ body {
 
 #time {
     grid-area: time;
-    font-size: 10em;
+    font-size: 7em;
     font-weight: 100;
-    text-align: center;
+    text-align: left;
 }
 
 button {

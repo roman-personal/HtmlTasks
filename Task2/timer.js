@@ -5,6 +5,7 @@ var started = false;
 var intervalId;
 const culture = "en-US";
 const options = { minimumIntegerDigits: 2, useGrouping: false };
+const msoptions = { minimumIntegerDigits: 3, useGrouping: false };
 
 function display() {
     var ms = acc + current;
@@ -13,10 +14,12 @@ function display() {
     var minutes = Math.floor(ms / 60000);
     ms -= minutes * 60000;
     var seconds = Math.floor(ms / 1000);
+    ms -= seconds * 1000;
     document.getElementById("time")
         .innerHTML = hour.toLocaleString(culture, options) + ":" +
         minutes.toLocaleString(culture, options) + ":" +
-        seconds.toLocaleString(culture, options);
+        seconds.toLocaleString(culture, options) + "." +
+        ms.toLocaleString(culture, msoptions);
 }
 
 function enableControls() {
@@ -46,7 +49,7 @@ function start() {
             current = Date.now() - base;
             enableControls();
             display();
-        }, 1000);
+        }, 110);
     }
 }
 

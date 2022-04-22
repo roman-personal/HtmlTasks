@@ -1,4 +1,4 @@
-import { Selector} from 'testcafe';
+import { Selector } from 'testcafe';
 
 fixture`Timer Test`
     .page`http://127.0.0.1:5500/Task2/index.html`;
